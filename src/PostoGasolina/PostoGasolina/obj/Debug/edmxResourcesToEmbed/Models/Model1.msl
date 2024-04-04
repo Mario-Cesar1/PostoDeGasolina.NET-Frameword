@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BDPostoModelStoreContainer" CdmEntityContainer="BDPostoEntities">
+    <EntitySetMapping Name="Motorista">
+      <EntityTypeMapping TypeName="BDPostoModel.Motorista">
+        <MappingFragment StoreEntitySet="Motorista">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="idade" ColumnName="idade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrdemServico">
+      <EntityTypeMapping TypeName="BDPostoModel.OrdemServico">
+        <MappingFragment StoreEntitySet="OrdemServico">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ValorLitro" ColumnName="ValorLitro" />
+          <ScalarProperty Name="DataOrdem" ColumnName="DataOrdem" />
+          <ScalarProperty Name="QtdCombustivel" ColumnName="QtdCombustivel" />
+          <ScalarProperty Name="IdMotorista" ColumnName="IdMotorista" />
+          <ScalarProperty Name="idPosto" ColumnName="idPosto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Posto">
+      <EntityTypeMapping TypeName="BDPostoModel.Posto">
+        <MappingFragment StoreEntitySet="Posto">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoCombustivel">
+      <EntityTypeMapping TypeName="BDPostoModel.TipoCombustivel">
+        <MappingFragment StoreEntitySet="TipoCombustivel">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Veiculo">
+      <EntityTypeMapping TypeName="BDPostoModel.Veiculo">
+        <MappingFragment StoreEntitySet="Veiculo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Marca" ColumnName="Marca" />
+          <ScalarProperty Name="TipoCombustivel" ColumnName="TipoCombustivel" />
+          <ScalarProperty Name="Motorista" ColumnName="Motorista" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,48 @@
+﻿<style>
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+        a :hover {
+            color: slategray;
+        }
+</style>
+@model PostoGasolina.Models.Motorista
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            Idade   
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idade)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <button class="btn btn-outline-warning">
+        @Html.ActionLink("Editar", "Edit", new { id = Model.id }) 
+    </button>
+    |
+    <button class="btn btn-outline-primary">
+        @Html.ActionLink("Voltar", "Index")
+    </button>
+</p>

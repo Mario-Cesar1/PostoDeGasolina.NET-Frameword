@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BDPostoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Motorista">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="idade" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrdemServico">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ValorLitro" Type="float" />
+    <Property Name="DataOrdem" Type="datetime" />
+    <Property Name="QtdCombustivel" Type="float" />
+    <Property Name="IdMotorista" Type="int" />
+    <Property Name="idPosto" Type="int" />
+  </EntityType>
+  <EntityType Name="Posto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoCombustivel">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descricao" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Veiculo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Marca" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="TipoCombustivel" Type="int" />
+    <Property Name="Motorista" Type="int" />
+  </EntityType>
+  <Association Name="FK_CombustivelVeiculo">
+    <End Role="TipoCombustivel" Type="Self.TipoCombustivel" Multiplicity="0..1" />
+    <End Role="Veiculo" Type="Self.Veiculo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoCombustivel">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Veiculo">
+        <PropertyRef Name="TipoCombustivel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MostoristaServico">
+    <End Role="Motorista" Type="Self.Motorista" Multiplicity="0..1" />
+    <End Role="OrdemServico" Type="Self.OrdemServico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Motorista">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="OrdemServico">
+        <PropertyRef Name="IdMotorista" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MotoristaVeiculo">
+    <End Role="Motorista" Type="Self.Motorista" Multiplicity="0..1" />
+    <End Role="Veiculo" Type="Self.Veiculo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Motorista">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Veiculo">
+        <PropertyRef Name="Motorista" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PostoServico">
+    <End Role="Posto" Type="Self.Posto" Multiplicity="0..1" />
+    <End Role="OrdemServico" Type="Self.OrdemServico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Posto">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="OrdemServico">
+        <PropertyRef Name="idPosto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BDPostoModelStoreContainer">
+    <EntitySet Name="Motorista" EntityType="Self.Motorista" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrdemServico" EntityType="Self.OrdemServico" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Posto" EntityType="Self.Posto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoCombustivel" EntityType="Self.TipoCombustivel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Veiculo" EntityType="Self.Veiculo" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CombustivelVeiculo" Association="Self.FK_CombustivelVeiculo">
+      <End Role="TipoCombustivel" EntitySet="TipoCombustivel" />
+      <End Role="Veiculo" EntitySet="Veiculo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MostoristaServico" Association="Self.FK_MostoristaServico">
+      <End Role="Motorista" EntitySet="Motorista" />
+      <End Role="OrdemServico" EntitySet="OrdemServico" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MotoristaVeiculo" Association="Self.FK_MotoristaVeiculo">
+      <End Role="Motorista" EntitySet="Motorista" />
+      <End Role="Veiculo" EntitySet="Veiculo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PostoServico" Association="Self.FK_PostoServico">
+      <End Role="Posto" EntitySet="Posto" />
+      <End Role="OrdemServico" EntitySet="OrdemServico" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

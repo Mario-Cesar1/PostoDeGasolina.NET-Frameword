@@ -1,0 +1,133 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\FUSION\\Documents\\GitHub\\PostoDeGasolina.NET-Frameword\\src\\PostoGasolina\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A028EFF0-6F84-4A48-99BA-4EE17094CF1D}|PostoGasolina\\PostoGasolina.csproj|c:\\users\\fusion\\documents\\github\\postodegasolina.net-frameword\\src\\postogasolina\\postogasolina\\views\\ordemservico\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A028EFF0-6F84-4A48-99BA-4EE17094CF1D}|PostoGasolina\\PostoGasolina.csproj|solutionrelative:postogasolina\\views\\ordemservico\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A028EFF0-6F84-4A48-99BA-4EE17094CF1D}|PostoGasolina\\PostoGasolina.csproj|C:\\Users\\FUSION\\Documents\\GitHub\\PostoDeGasolina.NET-Frameword\\src\\PostoGasolina\\postogasolina\\views\\ordemservico\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A028EFF0-6F84-4A48-99BA-4EE17094CF1D}|PostoGasolina\\PostoGasolina.csproj|solutionrelative:postogasolina\\views\\ordemservico\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A028EFF0-6F84-4A48-99BA-4EE17094CF1D}|PostoGasolina\\PostoGasolina.csproj|C:\\Users\\FUSION\\Documents\\GitHub\\PostoDeGasolina.NET-Frameword\\src\\PostoGasolina\\postogasolina\\views\\veiculo\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A028EFF0-6F84-4A48-99BA-4EE17094CF1D}|PostoGasolina\\PostoGasolina.csproj|solutionrelative:postogasolina\\views\\veiculo\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A028EFF0-6F84-4A48-99BA-4EE17094CF1D}|PostoGasolina\\PostoGasolina.csproj|C:\\Users\\FUSION\\Documents\\GitHub\\PostoDeGasolina.NET-Frameword\\src\\PostoGasolina\\postogasolina\\views\\motorista\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A028EFF0-6F84-4A48-99BA-4EE17094CF1D}|PostoGasolina\\PostoGasolina.csproj|solutionrelative:postogasolina\\views\\motorista\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A028EFF0-6F84-4A48-99BA-4EE17094CF1D}|PostoGasolina\\PostoGasolina.csproj|C:\\Users\\FUSION\\Documents\\GitHub\\PostoDeGasolina.NET-Frameword\\src\\PostoGasolina\\postogasolina\\views\\ordemservico\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A028EFF0-6F84-4A48-99BA-4EE17094CF1D}|PostoGasolina\\PostoGasolina.csproj|solutionrelative:postogasolina\\views\\ordemservico\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A028EFF0-6F84-4A48-99BA-4EE17094CF1D}|PostoGasolina\\PostoGasolina.csproj|C:\\Users\\FUSION\\Documents\\GitHub\\PostoDeGasolina.NET-Frameword\\src\\PostoGasolina\\postogasolina\\views\\tipocombustivel\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A028EFF0-6F84-4A48-99BA-4EE17094CF1D}|PostoGasolina\\PostoGasolina.csproj|solutionrelative:postogasolina\\views\\tipocombustivel\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A028EFF0-6F84-4A48-99BA-4EE17094CF1D}|PostoGasolina\\PostoGasolina.csproj|C:\\Users\\FUSION\\Documents\\GitHub\\PostoDeGasolina.NET-Frameword\\src\\PostoGasolina\\postogasolina\\views\\posto\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A028EFF0-6F84-4A48-99BA-4EE17094CF1D}|PostoGasolina\\PostoGasolina.csproj|solutionrelative:postogasolina\\views\\posto\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\FUSION\\Documents\\GitHub\\PostoDeGasolina.NET-Frameword\\src\\PostoGasolina\\PostoGasolina\\Views\\OrdemServico\\Create.cshtml",
+              "RelativeDocumentMoniker": "PostoGasolina\\Views\\OrdemServico\\Create.cshtml",
+              "ToolTip": "C:\\Users\\FUSION\\Documents\\GitHub\\PostoDeGasolina.NET-Frameword\\src\\PostoGasolina\\PostoGasolina\\Views\\OrdemServico\\Create.cshtml",
+              "RelativeToolTip": "PostoGasolina\\Views\\OrdemServico\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-04T14:11:39.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\FUSION\\Documents\\GitHub\\PostoDeGasolina.NET-Frameword\\src\\PostoGasolina\\PostoGasolina\\Views\\OrdemServico\\Index.cshtml",
+              "RelativeDocumentMoniker": "PostoGasolina\\Views\\OrdemServico\\Index.cshtml",
+              "ToolTip": "C:\\Users\\FUSION\\Documents\\GitHub\\PostoDeGasolina.NET-Frameword\\src\\PostoGasolina\\PostoGasolina\\Views\\OrdemServico\\Index.cshtml",
+              "RelativeToolTip": "PostoGasolina\\Views\\OrdemServico\\Index.cshtml",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAACwAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-04T14:04:49.45Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\FUSION\\Documents\\GitHub\\PostoDeGasolina.NET-Frameword\\src\\PostoGasolina\\PostoGasolina\\Views\\Veiculo\\Details.cshtml",
+              "RelativeDocumentMoniker": "PostoGasolina\\Views\\Veiculo\\Details.cshtml",
+              "ToolTip": "C:\\Users\\FUSION\\Documents\\GitHub\\PostoDeGasolina.NET-Frameword\\src\\PostoGasolina\\PostoGasolina\\Views\\Veiculo\\Details.cshtml",
+              "RelativeToolTip": "PostoGasolina\\Views\\Veiculo\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-04T14:02:36.253Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\FUSION\\Documents\\GitHub\\PostoDeGasolina.NET-Frameword\\src\\PostoGasolina\\PostoGasolina\\Views\\Motorista\\Details.cshtml",
+              "RelativeDocumentMoniker": "PostoGasolina\\Views\\Motorista\\Details.cshtml",
+              "ToolTip": "C:\\Users\\FUSION\\Documents\\GitHub\\PostoDeGasolina.NET-Frameword\\src\\PostoGasolina\\PostoGasolina\\Views\\Motorista\\Details.cshtml",
+              "RelativeToolTip": "PostoGasolina\\Views\\Motorista\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-04T14:02:25.824Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\FUSION\\Documents\\GitHub\\PostoDeGasolina.NET-Frameword\\src\\PostoGasolina\\PostoGasolina\\Views\\OrdemServico\\Details.cshtml",
+              "RelativeDocumentMoniker": "PostoGasolina\\Views\\OrdemServico\\Details.cshtml",
+              "ToolTip": "C:\\Users\\FUSION\\Documents\\GitHub\\PostoDeGasolina.NET-Frameword\\src\\PostoGasolina\\PostoGasolina\\Views\\OrdemServico\\Details.cshtml",
+              "RelativeToolTip": "PostoGasolina\\Views\\OrdemServico\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-04T14:02:19.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\FUSION\\Documents\\GitHub\\PostoDeGasolina.NET-Frameword\\src\\PostoGasolina\\PostoGasolina\\Views\\TipoCombustivel\\Details.cshtml",
+              "RelativeDocumentMoniker": "PostoGasolina\\Views\\TipoCombustivel\\Details.cshtml",
+              "ToolTip": "C:\\Users\\FUSION\\Documents\\GitHub\\PostoDeGasolina.NET-Frameword\\src\\PostoGasolina\\PostoGasolina\\Views\\TipoCombustivel\\Details.cshtml",
+              "RelativeToolTip": "PostoGasolina\\Views\\TipoCombustivel\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-04T14:02:03.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\FUSION\\Documents\\GitHub\\PostoDeGasolina.NET-Frameword\\src\\PostoGasolina\\PostoGasolina\\Views\\Posto\\Details.cshtml",
+              "RelativeDocumentMoniker": "PostoGasolina\\Views\\Posto\\Details.cshtml",
+              "ToolTip": "C:\\Users\\FUSION\\Documents\\GitHub\\PostoDeGasolina.NET-Frameword\\src\\PostoGasolina\\PostoGasolina\\Views\\Posto\\Details.cshtml",
+              "RelativeToolTip": "PostoGasolina\\Views\\Posto\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-04T14:00:23.03Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

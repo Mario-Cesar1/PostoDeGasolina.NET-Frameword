@@ -1,0 +1,75 @@
+﻿<style>
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+        a :hover {
+            color: slategray;
+        }
+</style>
+@model IEnumerable<PostoGasolina.Models.OrdemServico>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Ordem de Serviço</h2>
+
+<p>
+    <a class="btn btn-outline-success mt-3" href="/OrdemServico/Create">Criar</a>
+</p>
+<table class="table table-dark table-stripe">
+    <tr>
+        <th>
+            Valor do Litro
+        </th>
+        <th>
+            Data da ordem
+        </th>
+        <th>
+            Combustivel Gasto
+        </th>
+        <th>
+            Motorista
+        </th>
+        <th>
+            Posto
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            R$@Html.DisplayFor(modelItem => item.ValorLitro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataOrdem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QtdCombustivel) L
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Motorista.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Posto.Nome)
+        </td>
+        <td>
+            <button class="btn btn-outline-warning">
+                @Html.ActionLink("Editar", "Edit", new { id = item.id }) 
+            </button>
+            |
+            <button class="btn btn-outline-primary">
+                @Html.ActionLink("Detalhes", "Details", new { id = item.id }) 
+            </button>
+            |
+            <button class="btn btn-outline-danger">
+                @Html.ActionLink("Excluir", "Delete", new { id = item.id })
+            </button>
+        </td>
+    </tr>
+}
+
+</table>

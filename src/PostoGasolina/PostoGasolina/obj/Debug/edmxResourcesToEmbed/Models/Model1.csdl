@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BDPostoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Motorista">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="idade" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="OrdemServico" Relationship="Self.FK_MostoristaServico" FromRole="Motorista" ToRole="OrdemServico" />
+    <NavigationProperty Name="Veiculo" Relationship="Self.FK_MotoristaVeiculo" FromRole="Motorista" ToRole="Veiculo" />
+  </EntityType>
+  <EntityType Name="OrdemServico">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ValorLitro" Type="Double" />
+    <Property Name="DataOrdem" Type="DateTime" Precision="3" />
+    <Property Name="QtdCombustivel" Type="Double" />
+    <Property Name="IdMotorista" Type="Int32" />
+    <Property Name="idPosto" Type="Int32" />
+    <NavigationProperty Name="Motorista" Relationship="Self.FK_MostoristaServico" FromRole="OrdemServico" ToRole="Motorista" />
+    <NavigationProperty Name="Posto" Relationship="Self.FK_PostoServico" FromRole="OrdemServico" ToRole="Posto" />
+  </EntityType>
+  <EntityType Name="Posto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="OrdemServico" Relationship="Self.FK_PostoServico" FromRole="Posto" ToRole="OrdemServico" />
+  </EntityType>
+  <EntityType Name="TipoCombustivel">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Veiculo" Relationship="Self.FK_CombustivelVeiculo" FromRole="TipoCombustivel" ToRole="Veiculo" />
+  </EntityType>
+  <EntityType Name="Veiculo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Marca" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TipoCombustivel" Type="Int32" />
+    <Property Name="Motorista" Type="Int32" />
+    <NavigationProperty Name="Motorista1" Relationship="Self.FK_MotoristaVeiculo" FromRole="Veiculo" ToRole="Motorista" />
+    <NavigationProperty Name="TipoCombustivel1" Relationship="Self.FK_CombustivelVeiculo" FromRole="Veiculo" ToRole="TipoCombustivel" />
+  </EntityType>
+  <Association Name="FK_MostoristaServico">
+    <End Role="Motorista" Type="Self.Motorista" Multiplicity="0..1" />
+    <End Role="OrdemServico" Type="Self.OrdemServico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Motorista">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="OrdemServico">
+        <PropertyRef Name="IdMotorista" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MotoristaVeiculo">
+    <End Role="Motorista" Type="Self.Motorista" Multiplicity="0..1" />
+    <End Role="Veiculo" Type="Self.Veiculo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Motorista">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Veiculo">
+        <PropertyRef Name="Motorista" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PostoServico">
+    <End Role="Posto" Type="Self.Posto" Multiplicity="0..1" />
+    <End Role="OrdemServico" Type="Self.OrdemServico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Posto">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="OrdemServico">
+        <PropertyRef Name="idPosto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CombustivelVeiculo">
+    <End Role="TipoCombustivel" Type="Self.TipoCombustivel" Multiplicity="0..1" />
+    <End Role="Veiculo" Type="Self.Veiculo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoCombustivel">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Veiculo">
+        <PropertyRef Name="TipoCombustivel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BDPostoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Motorista" EntityType="Self.Motorista" />
+    <EntitySet Name="OrdemServico" EntityType="Self.OrdemServico" />
+    <EntitySet Name="Posto" EntityType="Self.Posto" />
+    <EntitySet Name="TipoCombustivel" EntityType="Self.TipoCombustivel" />
+    <EntitySet Name="Veiculo" EntityType="Self.Veiculo" />
+    <AssociationSet Name="FK_MostoristaServico" Association="Self.FK_MostoristaServico">
+      <End Role="Motorista" EntitySet="Motorista" />
+      <End Role="OrdemServico" EntitySet="OrdemServico" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MotoristaVeiculo" Association="Self.FK_MotoristaVeiculo">
+      <End Role="Motorista" EntitySet="Motorista" />
+      <End Role="Veiculo" EntitySet="Veiculo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PostoServico" Association="Self.FK_PostoServico">
+      <End Role="Posto" EntitySet="Posto" />
+      <End Role="OrdemServico" EntitySet="OrdemServico" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CombustivelVeiculo" Association="Self.FK_CombustivelVeiculo">
+      <End Role="TipoCombustivel" EntitySet="TipoCombustivel" />
+      <End Role="Veiculo" EntitySet="Veiculo" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

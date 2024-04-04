@@ -1,0 +1,40 @@
+﻿<style>
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+        a :hover {
+            color: slategray;
+        }
+</style>
+@model PostoGasolina.Models.Posto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <h4>
+            @Html.DisplayNameFor(model => model.Nome)
+        </h4>
+
+        <h5>
+            @Html.DisplayFor(model => model.Nome)
+        </h5>
+
+    </dl>
+</div>
+<p>
+    <button class="btn btn-outline-warning">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.id }) 
+    </button>
+    |
+    <button class="btn btn-outline-primary">
+        @Html.ActionLink("Back to List", "Index")
+    </button>
+</p>

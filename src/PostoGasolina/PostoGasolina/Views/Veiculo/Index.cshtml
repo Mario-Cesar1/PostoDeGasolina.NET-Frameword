@@ -1,0 +1,63 @@
+﻿<style>
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+        a :hover {
+            color: slategray;
+        }
+</style>
+@model IEnumerable<PostoGasolina.Models.Veiculo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Veículo</h2>
+
+<p>
+    <a class="btn btn-outline-success mt-3" href="/Veiculo/Create">Criar</a>
+</p>
+<table class="table table-dark table-stripe">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Marca)
+        </th>
+        <th>
+            Motorista
+        </th>
+        <th>
+            Tipo de Combustivel
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Marca)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Motorista1.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoCombustivel1.Descricao)
+        </td>
+        <td>
+            <button class="btn btn-outline-warning">
+                @Html.ActionLink("Editar", "Edit", new { id = item.id }) 
+            </button>
+            |
+            <button class="btn btn-outline-primary">
+                @Html.ActionLink("Detalhes", "Details", new { id = item.id }) 
+            </button>
+            |
+            <button class="btn btn-outline-danger">
+                @Html.ActionLink("Excluir", "Delete", new { id = item.id })
+            </button>
+        </td>
+    </tr>
+}
+
+</table>
